@@ -1,0 +1,221 @@
+<html>
+
+<head>
+    <title>Shop Our Products</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .page-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .product-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-name {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .product-description {
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .product-price {
+            font-size: 24px;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .product-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .quantity-input {
+            width: 60px;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .add-to-cart {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .add-to-cart:hover {
+            background: #45a049;
+        }
+
+        .cart-icon {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            z-index: 100;
+        }
+
+        .cart-count {
+            background: #e74c3c;
+            color: white;
+            border-radius: 50%;
+            padding: 2px 6px;
+            font-size: 12px;
+            position: absolute;
+            top: -8px;
+            right: -8px;
+        }
+
+        @media (max-width: 768px) {
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <%- include('partials/navbar1.ejs') %>
+        <div class="cart-icon">
+            Cart <span class="cart-count">0</span>
+        </div>
+
+        <div class="container">
+            <h1 class="page-title">Our Products</h1>
+
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <img src="/public/images/Gift Voucher.jpg" alt="Voucher VIP" class="product-image">
+                    <div class="product-info">
+                        <h2 class="product-name">Gift Voucher 1</h2>
+                        <p class="product-description">High-quality treatment with $150 value.</p>
+                        <div class="product-price">$120</div>
+                        <div class="product-actions">
+                            <form action="/cart/add" method="POST">
+                                <input type="number" min="1" value="1" class="quantity-input">
+                                <input type="hidden" name="itemID" value="1">
+                                <input type="hidden" name="itemName" value="Gift Voucher 1">
+                                <input type="hidden" name="itemPrice" value="120">
+                                <button type="submit">Add to Cart</button>
+                        </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <img src="/public/images/Gift Voucher.jpg" alt="Product 2" class="product-image">
+                    <div class="product-info">
+                        <h2 class="product-name">Gift Voucher 2</h2>
+                        <p class="product-description">High-quality treatment with $100 value
+                        </p>
+                        <div class="product-price">$100</div>
+                        <div class="product-actions">
+                            <input type="number" min="1" value="1" class="quantity-input">
+                            <input type="hidden" name="itemID" value="2">
+                            <input type="hidden" name="itemName" value="Gift Voucher 2">
+                            <input type="hidden" name="itemPrice" value="100">
+                            <button type="submit">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <img src="/public/images/Gift Voucher.jpg" alt="Product 3" class="product-image">
+                    <div class="product-info">
+                        <h2 class="product-name">Gift Voucher 3</h2>
+                        <p class="product-description">High-quality treatment with $80 value</p>
+                        <div class="product-price">$80</div>
+                        <div class="product-actions">
+                            <input type="number" min="1" value="1" class="quantity-input">
+                            <input type="hidden" name="itemID" value="3">
+                            <input type="hidden" name="itemName" value="Gift Voucher 3">
+                            <input type="hidden" name="itemPrice" value="80">
+                            <button type="submit">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <img src="/public/images/VIP.jpg" alt="Product 4" class="product-image">
+                    <div class="product-info">
+                        <h2 class="product-name"> 10 visits Gift Voucher</h2>
+                        <p class="product-description">10 visits with $120 vlaue treament
+                        </p>
+                        <div class="product-price">$1099</div>
+                        <div class="product-actions">
+                            <input type="number" min="1" value="1" class="quantity-input">
+                            <input type="hidden" name="itemID" value="4">
+                            <input type="hidden" name="itemName" value="10 Visit Gift Voucher">
+                            <input type="hidden" name="itemPrice" value="1099">
+                            <button type="submit">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+</body>
+
+<footer>
+    <%- include('partials/footer.ejs') %>
+</footer>
+
+</html>

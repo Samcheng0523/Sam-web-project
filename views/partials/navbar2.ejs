@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lan</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* Header and Navigation Styles */
+        .header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .top-bar {
+            background: #2c5282;
+            /* Dark blue */
+            color: white;
+            padding: 8px 0;
+            font-size: 14px;
+        }
+
+        .top-bar-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #2d3748;
+            font-weight: 500;
+            padding: 8px 12px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: #2c5282;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background: #2c5282;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .book-button {
+            background: #2c5282;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .book-button:hover {
+            background: #1a365d;
+            transform: translateY(-2px);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .top-bar-content {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .contact-info {
+                margin-bottom: 5px;
+            }
+
+            /* Cart icon styling */
+            .cart {
+                position: fixed;
+                /* Fix it at the top-right */
+                top: 10px;
+                /* Slight margin from top */
+                right: 10px;
+                /* Slight margin from right */
+                display: flex;
+                align-items: center;
+                z-index: 10;
+                /* Ensure cart is above the navbar */
+            }
+
+            #cart-icon {
+                width: 30px;
+                /* Adjust icon size */
+                height: 30px;
+                /* Adjust icon size */
+            }
+
+            #cart-count {
+                background-color: red;
+                color: white;
+                border-radius: 50%;
+                padding: 5px 10px;
+                margin-left: 5px;
+                /* Slight margin between icon and count */
+                font-size: 14px;
+                /* Adjust font size */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <!-- Main Navigation -->
+        <div class="nav-container">
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="/public/images/lan flower logo.jpg" alt="Logo">
+                    <h1>Lan</h1>
+                </div>
+
+                <button class="mobile-menu-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" />
+                    </svg>
+                </button>
+
+                <div class="nav-links">
+                    <a href="home">Home</a>
+                    <a href="search">Search</a>
+                    <a href="service">Services</a>
+                    <a href="team">Team</a>
+                    <a href="accessory">Accessory</a>
+                    <a href="testimonials">Testimonials</a>
+                    <a href="login" class="book-button">Book Online</a>
+                </div>
+            </nav>
+        </div>
+        </style>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <%- include('partials/header1.ejs') %>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+
+            header {
+                background-color: #333;
+                color: rgb(0, 0, 0);
+                padding: 10px;
+                text-align: center;
+            }
+
+            nav ul {
+                list-style: none;
+                padding: 0;
+            }
+
+            nav ul li {
+                display: inline;
+                margin: 0 10px;
+            }
+
+            nav ul li a {
+                color: white;
+                text-decoration: none;
+            }
+
+            footer {
+                background-color: #333;
+                color: rgb(0, 0, 0);
+                text-align: center;
+                padding: 10px;
+                position: fixed;
+                width: 100%;
+                bottom: 0;
+            }
+
+            .admin-container {
+                padding: 20px;
+                text-align: center;
+            }
+        </style>
+
+</head>
+
+<body>
+
+
+    <%- include('partials/navbar1.ejs') %>
+
+        <div class="admin-container">
+            <h1>Welcome, Admin</h1>
+            <p>This is the admin page. You can manage the site from here.</p>
+
+
+
+            <!-- Display User Table -->
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Actions</th>
+                    </tr>
+
+
+            </table>
+        </div>
+
+
+        </div>
+
+        <!-- Include footer -->
+        <%- include('partials/footer') %>
+
+</body>
+<footer>
+    <%- include('partials/footer.ejs') %>
+</footer>
+
+
+</html>

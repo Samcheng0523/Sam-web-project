@@ -1,0 +1,175 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    /* Main footer container */
+    footer {
+      width: 100%;
+      background-color: #9d5ca0;
+      padding: 0px;
+    }
+
+    /* Footer content wrapper */
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      /* Enable flexbox */
+      flex-direction: row;
+      /* Set direction left to right */
+      justify-content: space-between;
+      /* Space items evenly */
+      align-items: flex-start;
+      /* Align items to top */
+      gap: 50px;
+      /* Space between sections */
+    }
+
+    /* Individual footer sections */
+    .footer-section {
+      flex: 1;
+      /* Each section takes equal width */
+    }
+
+    .footer-content ul {
+      list-style: none;
+    }
+
+    .footer-content a {
+      color: #444444;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-content a:hover {
+      color: #1d1d1d;
+    }
+
+    .footer-content li {
+      margin-bottom: 10px;
+    }
+
+    /* Headings */
+    .footer-content h4 {
+      color: 1d1d1d;
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+
+    /* Contact section */
+    .contact-section p {
+      color: #1d1d1d;
+      margin-bottom: 10px;
+    }
+
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+      .footer-content {
+        flex-direction: column;
+        /* Stack on mobile */
+        padding: 0 20px;
+      }
+    }
+
+    i {
+      margin-right: 8px;
+    }
+
+    .footer-section,
+    .links-section,
+    .contact-section,
+    .social-section {
+      margin-bottom: 0px;
+      text-align: center;
+    }
+
+    .privacy-policy {
+      position: flex;
+      /* Fixes the element on the screen */
+      bottom: 10px;
+      /* Position 20px from the bottom */
+      right: 50px;
+      /* Position 20px from the right */
+      background-color: rgba(243, 170, 237, 0.7);
+      /* Optional: Background color */
+      color: white;
+      /* Text color */
+      padding: 10px 20px;
+      /* Padding for the box */
+      border-radius: 8px;
+      /* Optional: Rounded corners */
+      font-size: 6px;
+      /* Adjust font size */
+
+    }
+  </style>
+
+
+</head>
+
+
+<footer>
+  <div class="footer-content">
+
+    <!-- Home Page -->
+    <div class="links-section">
+      <h4>Menu</h4>
+      <ul>
+        <li><a href="/home">Home</a></li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/service">Services</a></li>
+        <li><a href="/login">Book Online</a></li>
+        <li><a href="/testimonials">Testimonials</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="contact-section">
+      <h4>Contact Us</h4>
+      <p>Phone: 123-456-789</p>
+      <p>Email: Lan-auckland.com</p>
+      <p>Address: Auckland, New Zealand</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="links-section">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Social Media -->
+    <div class="social-section">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="https://twitter.com/yourprofile" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Twitter_Logo_2021.svg" alt="Twitter" style="width: 24px; height: 24px;">
+      </a>
+      <a href="https://wa.me/yourphone" target="_blank">
+        <a href="https://www.facebook.com/yourprofile" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" style="width: 24px; height: 24px;">
+      </a>
+      <a href="https://www.instagram.com/yourprofile" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width: 24px; height: 24px;">
+    </a>
+    <a href="https://wa.me/yourphone" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 24px; height: 24px;">
+  </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="privacy-policy">
+    <p>© 2024 Lan. All rights reserved.</p>
+    <p><a href="/privacy">Privacy Policy</a> | <a href="/terms">Terms of Service</a></p>
+  </div>
+</footer>

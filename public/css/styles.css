@@ -1,0 +1,40 @@
+h2 {
+    color:green;
+}
+
+h4 {
+    Color:purple;
+}
+
+p  {
+    color:#000000;
+}
+
+.img2 {
+    float: right;
+     max-width: 600px;
+     margin-left: 20px;
+}
+
+.content { 
+    flex: 1
+
+}
+
+.container {
+    display: flex;
+    gap: 20px;  /* Space between paragraphs */
+}
+
+.paragraph {
+    flex: 1;    /* Makes both paragraphs take equal width */
+    background-color: rgb(243, 215, 248);
+    padding: 15px;
+}
+
+/* OR Circle bullet */
+.custom-bullets li:before {
+    content: "•";
+    color: #555;
+    font-size: 20px;
+}

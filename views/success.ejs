@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            animation: slideDown 0.5s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .congrats-title {
+            color: #4CAF50;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .message {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .emoji {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="modal-overlay">
+        <div class="modal">
+            <div class="emoji">🎉</div>
+            <h2 class="congrats-title">Congratulations!</h2>
+            <p class="message">Your registration was successful!</p>
+            <script>
+                // Wait 2 seconds then redirect
+                setTimeout(() => {
+                    window.location.href = '/login';
+                }, 2000);
+            </script>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+<html>
+
+<head>
+    <%- include('partials/header1.ejs') %>
+        <style>
+            /* Ensure full height of the page is covered */
+            body,
+            html {
+                height: 100%;
+                margin: 0;
+                font-family: Arial, Helvetica, sans-serif;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #f4f4f4;
+            }
+
+            /* Container to center the content */
+            .container {
+                text-align: center;
+                padding: 20px;
+                border-radius: 10px;
+                background-color: #fff;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                width: 100%;
+                max-width: 400px;
+                /* Max width for the form */
+            }
+
+            /* Styling for form elements */
+            input[type="text"],
+            input[type="password"],
+            input[type="submit"] {
+                width: 100%;
+                padding: 12px;
+                margin: 10px 0;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+                box-sizing: border-box;
+            }
+
+            input[type="submit"] {
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                cursor: pointer;
+            }
+
+            input[type="submit"]:hover {
+                background-color: #45a049;
+            }
+
+            /* Link style */
+            a {
+                text-decoration: none;
+                color: #007BFF;
+            }
+
+            a:hover {
+                text-decoration: underline;
+            }
+
+        </style>
+</head>
+
+<body>
+    <%- include('partials/navbar1.ejs') %>
+        <div>
+            <h1>Login / Register</h1>
+            <br>
+            <form action="/auth" method="post">
+                <input type="text" name="username" placeholder="User name" id="username" required>
+                <label for="password">
+                </label>
+                <input type="password" name="password" placeholder="Password" id="password" required>
+                <input type="submit" value="Login">
+            </form>
+            <br>
+            <h4><a href="register">Register</a></h4>
+        </div>
+</body>
+
+
+</html>

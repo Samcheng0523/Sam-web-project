@@ -1,0 +1,129 @@
+<html>
+
+<head>
+    <style>
+ /* Reset and base styles */
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Title styling */
+        .title {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: purple;
+            text-align: center; /* Center the title */
+        }
+
+        /* Paragraph styling */
+        .paragraph {
+            font-size: 16px;
+            max-width: 800px;
+            margin: 20px auto;
+            text-align: center; /* Center align the paragraphs */
+        }
+
+        /* Container for each section */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center the content horizontally */
+            justify-content: center; /* Center vertically */
+            margin-bottom: 30px;
+        }
+
+        /* Photo styling */
+        .photo {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            margin-bottom: 20px; /* Space between image and paragraph */
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <%- include('partials/navbar1.ejs') %>
+            <h1 class="title"> Meet The Team </h1>
+
+            <div class="container">
+
+                <img src="/public/images/therapist 1.jpg" alt="therapist" class="photo">
+
+                <p class="paragraph">
+                    Hello, my name is Alex, and I’m a licensed massage therapist. I'm here to help you relax,
+                    relieve
+                    any tension, and address any specific concerns you may have regarding your muscles or
+                    overall
+                    well-being. Before we begin, I’d love to learn more about what brought you in today—whether
+                    it’s
+                    stress relief, pain management, or simply relaxation—and any areas you would like me to
+                    focus on
+                    during our session. Feel free to let me know if you have any preferences or if there are any
+                    areas
+                    of discomfort that I should be aware of. I’m here to create a comfortable and healing
+                    experience
+                    for
+                    you."
+                </p>
+            </div>
+
+    <div class="container">
+
+        <img class="content" src="/public/images/therapist 2.jpg" alt="therapist 2" class="photo">
+        <p class="paragraph">
+            "Hi, I’m Susan, and I’m a licensed massage therapist. I specialize in helping people feel their
+            best
+            by offering treatments that address both physical tension and mental stress. Before we start,npm init -y
+            I’d
+            like to hear about any areas where you might be feeling discomfort or tightness, or if there are
+            any
+            specific goals you have for today’s session. My goal is to make sure you feel relaxed and
+            comfortable throughout the treatment, so please let me know if you have any preferences with
+            pressure or technique. I'm here to support you in achieving a sense of well-being."
+        </p>
+    </div>
+
+    <div class="container">
+
+        <img class="content" src="/public/images/therapist 3.jpg" alt="therapist 3" class="photo">
+        <p class="paragraph">
+            "Hi, my name is Adam, and I’m a licensed massage therapist. I focus on providing a relaxing and
+            therapeutic experience tailored to your needs. Before we start, I’d love to know if there are
+            any
+            areas of tension or pain that you’d like me to pay extra attention to today. Whether you're
+            looking
+            for stress relief, muscle relaxation, or something more specific, I’ll work with you to make
+            sure
+            you're comfortable throughout the session. If at any point you need adjustments with pressure or
+            technique, please feel free to let me know."
+        </p>
+    </div>
+
+
+    </div>
+    <footer>
+        <%- include('partials/footer.ejs') %>
+    </footer>
+</body>
+
+</html>

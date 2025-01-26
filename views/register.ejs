@@ -1,0 +1,128 @@
+<head>
+
+    <title>Registration Form</title>
+    <style>
+        .register-container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .error {
+            color: red;
+            font-size: 12px;
+            margin-top: 5px;
+            display: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+
+        .register-container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+    </style>
+
+<body>
+    <%- include('partials/navbar1.ejs') %>
+        <div class="register-container">
+            <h2>Register</h2>
+            <form method="POST" action="/reg">
+
+
+                <!-- Username field -->
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                    <label class="error" id="username-error">Username must be at least 3 characters</label>
+                </div>
+
+                <!-- Email field -->
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label class="error" id="email-error">Please enter a valid email</label>
+                </div>
+
+                <!-- Password field -->
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                    <label class="error" id="password-error">Password must be at least 4 characters</label>
+                </div>
+
+                <!-- Confirm Password field -->
+                <div class="form-group">
+                    <label for="confirm_password">Confirm Password:</label>
+                    <input type="password" id="confirm_password" name="confirm_password" required>
+                    <label class="error" id="confirm_password-error">Passwords do not match</label>
+                </div>
+
+                <button type="submit">Register</button>
+            </form>
+        </div>
+
+        <!-- Add this where you want the message to appear, typically near the top of your form -->
+        <% if (typeof success !=='undefined' && success==='registered' ) { %>
+            <div class="message-container">
+                <div class="success">
+                    Registration successful! Please log in.
+                    <span class="close-btn">&times;</span>
+                </div>
+            </div>
+            <% } %>
+
+                <% if (typeof error !=='undefined' ) { %>
+                    <div class="message-container">
+                        <div class="error">
+                            <%= error==='passwords_dont_match' ? 'Passwords do not match!' : 'An error occurred!' %>
+                                <span class="close-btn">&times;</span>
+                        </div>
+                    </div>
+                    <% } %>
+
+</body>
+
+</html>

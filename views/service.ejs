@@ -1,0 +1,147 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        /* Reset margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Full height body and html for flexbox layout */
+        html,
+        body {
+            height: 100%;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        /* Flexbox layout for body to make footer stick to the bottom */
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Ensure footer stays at the bottom */
+        }
+
+        /* Main content area */
+        .container {
+            flex: 1;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center; /* Center text in the container */
+        }
+
+        /* Header Section */
+        header {
+            background-color: #861e9b;
+            color: rgb(0, 0, 0);
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        /* Paragraph styling */
+        p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+            text-align: center; /* Center all paragraphs */
+            padding-left: 30px;  /* Adds space on the left */
+            padding-right: 30px; /* Adds space on the right */
+            max-width: 700px;  /* Ensure paragraphs do not exceed this width */
+            margin: 20px auto;  /* Center the paragraphs */
+        }
+
+        h2 {
+            margin-top: 40px;
+            text-align: center; /* Center the "Services" heading */
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* Styling for unordered list */
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            text-align: left; /* Align the list items to the left */
+            margin: 20px auto;
+            max-width: 700px; /* Ensure the list doesn't exceed a max width */
+        }
+
+        li {
+            margin-bottom: 15px;
+        }
+
+        /* Add any additional styling for the image */
+        .service-image {
+            width: 100%;
+            max-width: 750px;
+            display: block;
+            margin: 20px auto; /* Center the image */
+        }
+    </style>
+
+</head>
+
+<body>
+    <%- include('partials/navbar1.ejs') %>
+        <h2>Services Provided</h2>
+
+        <img src="/public/images/massage types.png" alt="Massage Types" class="service-image">
+
+        <p>
+            The importance of each type of massage varies depending on the individual's needs and conditions. Here's how each type of massage can help you:
+        </p>
+
+
+        <ul id="bulletList">
+            <li>
+                <strong>Massage:</strong> Focuses on the muscles of the back, neck, and shoulders to relieve tension,
+                improve posture, and reduce discomfort. It can be a relaxing treatment or aimed at alleviating pain or
+                stiffness in the back area.
+            </li>
+            <li>
+                <strong>Sport Massage:</strong> Designed for athletes or active individuals, this massage helps improve
+                performance, prevent injuries, and reduce muscle soreness. It involves techniques like stretching, deep
+                pressure, and kneading to target muscle groups used in sports.
+            </li>
+            <li>
+                <strong>Deep Tissue Massage:</strong> Uses slow, firm strokes and deep pressure to target the deeper
+                layers of muscle and connective tissue. It's effective for chronic pain, muscle tension, and stiff
+                areas, particularly in the neck, shoulders, and back.
+            </li>
+            <li>
+                <strong>Pregnancy Massage:</strong> A safe, gentle massage tailored to the needs of pregnant women,
+                usually after the first trimester. It helps alleviate common pregnancy discomforts like back pain,
+                swelling, and stress while improving relaxation and circulation.
+            </li>
+            <li>
+                <strong>Couple Massage:</strong> A shared experience where two people receive massages at the same time
+                in the same room. It's ideal for couples or friends who want to enjoy relaxation together, often in a
+                spa setting.
+            </li>
+            <li>
+                <strong>Mobile Massage:</strong> A service where a massage therapist comes to your location, such as
+                home, hotel, or office. This type of massage offers convenience and flexibility, often for relaxation or
+                stress relief, without needing to visit a spa.
+            </li>
+        </ul>
+</body>
+
+<footer>
+    <%- include('partials/footer.ejs') %>
+</footer>
+
+</html>

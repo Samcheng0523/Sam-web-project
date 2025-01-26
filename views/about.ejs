@@ -1,0 +1,132 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Lan</title>
+    <style>
+        /* Reset margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Full height body and html for flexbox layout */
+        html,
+        body {
+            height: 100%;
+            /* Makes sure the page takes up the full height */
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        /* Flexbox layout for body to make footer stick to the bottom */
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Main content area */
+        .container {
+            flex: 1;
+            /* This makes sure the container takes up the remaining space */
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Header Section */
+        header {
+            background-color: #861e9b;
+            color: rgb(0, 0, 0);
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        /* Paragraph spacing */
+        p {
+            margin-bottom: 20px;
+            /* Adds space below each paragraph */
+            line-height: 1.6;
+            /* Adjusts line height for better readability */
+        }
+        
+        h2#services {
+            margin-top: 40px; /* Adds space above "Our Services" */
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar Section -->
+    <%- include('partials/navbar1.ejs') %>
+
+        <!-- Header Section -->
+        <header>
+            <h1>Welcome to Lan</h1>
+            <p>Your destination for relaxation, wellness, and rejuvenation.</p>
+        </header>
+
+        <!-- Main Content Section -->
+        <div class="container">
+            <h2>About Us</h2>
+            <p>At Lan, we believe that massage therapy is more than just a luxury; it’s an essential part of your
+                self-care
+                routine. Our mission is to provide you with a peaceful, healing environment where you can relax, relieve
+                stress, and promote your overall well-being.</p>
+
+            <h2>Our Story</h2>
+            <p>Founded in 2015, we have been offering high-quality massage therapy services to our community. Whether
+                you're seeking relief from chronic pain, looking to unwind after a long day, or simply want to improve
+                your physical and mental health, we are here to meet your needs. Our expert therapists are dedicated to
+                making
+                your experience enjoyable and effective.</p>
+
+            <h2>Why Choose Us?</h2>
+            <ul>
+                <li><strong>Professional and Experienced Therapists:</strong> Our therapists are highly trained and
+                    certified in various techniques, including Swedish, deep tissue, sports, and therapeutic massage.
+                </li>
+                <li><strong>Personalized Treatments:</strong> We tailor each session to meet your specific needs,
+                    whether it's stress relief, pain management, or relaxation.</li>
+                <li><strong>Serene and Relaxing Environment:</strong> Our massage studio is designed to create a calming
+                    atmosphere that helps you unwind and experience true relaxation.</li>
+                <li><strong>Commitment to Your Well-Being:</strong> We believe in treating the whole person—mind, body,
+                    and spirit. Your comfort and health are our top priority.</li>
+            </ul>
+
+            <h2>Our Services</h2>
+            <p>We offer a variety of massage therapy services designed to help you feel your best. Some of our most
+                popular services include:</p>
+            <ul>
+                <li>Deep Tissue Massage</li>
+                <li>Hot Stone Massage</li>
+                <li>Sports Massage</li>
+                <li>Therapeutic Massage for Pain Relief</li>
+                <li>Custom Treatments Tailored to Your Needs</li>
+            </ul>
+        </div>
+
+        <!-- Footer Section -->
+        <footer>
+            <%- include('partials/footer.ejs') %>
+        </footer>
+
+</body>
+
+</html>

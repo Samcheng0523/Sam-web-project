@@ -1,0 +1,168 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <style>
+        /* Custom styling for the input field */
+        #booking-date {
+            width: 250px;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .container {
+            max-width: 100%;
+            margin: 50px auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr; /* 2 columns, with 2fr for the left content and 1fr for the calendar */
+            gap: 30px;
+            padding: 0 20px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure full height */
+        }
+
+        .intro-message {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .intro-message p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .intro-message ul {
+            list-style: none;
+            padding: 0;
+            font-size: 16px;
+        }
+
+        .intro-message ul li {
+            background: url('https://img.icons8.com/ios-filled/50/007bff/checkmark.png') no-repeat left center;
+            padding-left: 30px;
+            margin-bottom: 10px;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .intro-message a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .intro-message a:hover {
+            text-decoration: underline;
+        }
+
+        /* Calendar styles */
+        .calendar-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #booking-date {
+            width: 100%; /* Ensures full width */
+        }
+
+        /* Styling for button */
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            text-align: flex;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            margin-top: auto; /* Pushes footer to the bottom */
+            width: 100%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <%- include('partials/navbar2.ejs') %>
+    
+    <p style="color:#00f">Welcome to a Members only page. You are now logged in.</p>
+
+    <div class="container">
+        <!-- Left Side Content -->
+        <div class="intro-message">
+            <h2 style="color:#7fae5d">Welcome to Booking Website! We listen to our clients' needs. We create specific treatment plans for each individual.</h2>
+            <p>Thank you for becoming a part of our exclusive community. We're excited to provide you with access to premium content, special offers, and personalized support.</p>
+
+            <h2 style="color: #333">As a member, you can:</h2>
+
+            <ul style="line-height:180%">
+                <li>Access exclusive articles, videos, and resources</li>
+                <li>Enjoy early releases of new products</li>
+                <li>Join private discussions with other members</li>
+                <li>Get priority support for any inquiries or issues</li>
+            </ul>
+        </div>
+
+        <!-- Right Side Calendar -->
+        <div class="calendar-container">
+            <label for="booking-date">Select a Date:</label>
+            <input type="text" id="booking-date" placeholder="Click to select a date">
+            <button type="submit">Book Now</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        // Initialize Flatpickr on the input field
+        flatpickr("#booking-date", {
+            enableTime: false, // Disable time selection
+            dateFormat: "Y-m-d", // Set the date format (e.g., 2025-01-15)
+            minDate: "today", // Disable past dates
+            locale: "en", // Set the locale (optional, default is English)
+            onChange: function (selectedDates, dateStr, instance) {
+                // Handle the date selection (e.g., show an alert or update a hidden field)
+                console.log(`Selected date: ${dateStr}`);
+            }
+        });
+    </script>
+
+    <footer>
+        <%- include('partials/footer.ejs') %>
+    </footer>
+
+</body>
+
+</html>

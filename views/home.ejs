@@ -1,0 +1,92 @@
+<html>
+
+<head>
+    <%- include('partials/header1.ejs') %>
+        <style>
+            /* CSS to center the image */
+            .image-container {
+                text-align: center;
+                /* Centers content horizontally */
+            }
+
+            .image-container img {
+                display: block;
+                margin: 0 auto;
+                /* Centers the image */
+                max-width: 100%;
+                /* Makes sure the image is responsive */
+                height: auto;
+            }
+
+            /* Additional styles for the page if needed */
+            .content {
+                text-align: center;
+            }
+        </style>
+</head>
+
+<body>
+    <%- include('partials/navbar1.ejs') %>
+    
+        <div class="content">
+            <img src="public/images/Relaxation-Massage-Auckland.webp" alt="Massage">
+            <div class="container">
+                <div class="paragraph">
+
+
+                    <h2>The Benefits of Massage Therapy</h2>
+                    <div class="gradient-overlay"></div>
+                    <p>Massage therapy offers numerous benefits, including stress relief, pain reduction, improved
+                        circulation and flexibility, enhanced sleep quality, mental health support, and boosted
+                        immunity,making it a valuable practice for overall physical and mental well-being.
+
+                    <p>
+                        A study published in the International Journal of Neuroscience found that massage therapy can
+                        lead to decreased cortisol levels (a stress hormone) and increased levels of neurotransmitters
+                        associated with lowering anxiety.
+
+                    </p>
+
+                    <div class="gradient-overlay"></div>
+
+                    <p>Pain relief through the release of endorphins
+                        Improved blood circulation
+                        Stimulated lymphatic system
+                        Enhanced immune function through the activation of the parasympathetic nervous system
+                        Lower blood pressure
+                        Injury prevention
+                        Posture improvement and better body dynamics
+                        Enhanced breathing
+                        Rehabilitation
+
+                    </p>
+                </div>
+                <div class="paragraph">
+                    <h2>Mental Benefits</h2>
+                    <p style="color:#000000f6">
+
+                        Massage therapy can significantly improve mental well-being.
+                        Mental benefits include:
+
+                    <ul class="bullet-list">
+                        <li>Reduces stress and anxiety</li>
+                        <li>Enhances relaxation, creating a sense of calm</li>
+                        <li>Improves sleep quality</li>
+                        <li>Elevates mood by triggering the release of endorphins</li>
+                        <li>Aids in relieving symptoms of depression</li>
+                        <li>Increases mental clarity and focus</li>
+                        <li>Promotes emotional balance</li>
+                        <li>Boosts energy levels by alleviating mental fatigue</li>
+                        <li>May improve memory by reducing stress-related cognitive impairment</li>
+
+                    </ul>
+                    </p>
+                </div>
+            </div>
+</body>
+
+<footer>
+    <%- include('partials/footer.ejs') %>
+</footer>
+
+</html>

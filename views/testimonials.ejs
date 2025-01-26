@@ -1,0 +1,106 @@
+<html>
+
+<head>
+    <style>
+        /* Style for the paragraphs */
+        .testimonial {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+            /* Adds space between the paragraph and the dotted line */
+        }
+
+        /* Style for the dotted line */
+        .dotted-line {
+            border-top: 2px dotted #000;
+            /* Creates a black dotted line */
+            margin: 20px 0;
+            /* Adds space above and below the line */
+        }
+
+        .rating {
+            font-size: 24px;
+            color: #c94cfa;
+            margin-top: 10px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <%- include('partials/navbar1.ejs') %>
+            <div class="content">
+                <h1>Testimonials</h1>
+                <img class="img2" src="/public/images/Testimonials-Photo.webp" alt="testimonials">
+
+                <h2>HERE’S WHAT OUR CLIENTS HAVE TO SAY … ⭐⭐⭐⭐⭐</h2>
+                <div class="testimonials">
+                    <p class="testimonial">Sarah T.
+                        ⭐⭐⭐⭐⭐
+                        “I’ve been going to regular massage sessions for a few months now, and it’s honestly been
+                        life-changing. The stress and tension from my work just melt away, and I leave feeling refreshed
+                        and
+                        rejuvenated every single time. Highly recommend it to anyone feeling overwhelmed!”</p>
+                    <div class="dotted-line"></div>
+
+                    <p class="testimonial">Mark D.
+                        ⭐⭐⭐⭐⭐
+                        “This was my first time getting a professional massage, and I’m hooked! The therapist was so
+                        skilled, and I felt immediate relief in my back and shoulders. It’s like a reset for your body
+                        and
+                        mind. Can’t wait for my next session!”</p>
+                    <div class="dotted-line"></div>
+
+                    <p class="testimonial">Emily H.
+                        ⭐⭐⭐⭐⭐
+                        “I suffer from chronic neck pain, and massage therapy has been a game changer. After each
+                        session, I
+                        feel so much more relaxed and my pain is significantly reduced. It’s the perfect way to unwind
+                        after
+                        a long week. Thank you for helping me feel better every time!”</p>
+                    <div class="dotted-line"></div>
+
+                    <p class="testimonial">John R.
+                        ⭐⭐⭐⭐⭐
+                        “As someone who’s always been into fitness, I get tight muscles from intense workouts. A massage
+                        is
+                        the perfect remedy! I leave feeling like a new person, and I’m able to recover faster. It’s a
+                        must-do for anyone serious about their fitness routine!”</p>
+                    <div class="dotted-line"></div>
+
+                    <p class="testimonial">Olivia M.
+                        ⭐⭐⭐⭐⭐
+                        “Massage has become my go-to self-care ritual. The relaxation and relief it provides are
+                        unmatched.
+                        I feel like I’m glowing after every session, both physically and mentally. It's a simple yet
+                        powerful way to give back to your body.”</p>
+                    <div class="dotted-line"></div>
+                    <p class="testimonial">Alexanda W.
+                        ⭐⭐⭐⭐⭐
+                        I’ve been going to regular massage sessions for a few months now, and it’s honestly been
+                        life-changing. The stress and tension from my work just melt away, and I leave feeling refreshed
+                        and rejuvenated every single time. Highly recommend it to anyone feeling overwhelmed!”</p>
+                    <div class="dotted-line"></div>
+                </div>
+            </div>
+
+            <div class="rating">
+                <h2>Overall rating</h2>
+                <ul class="rating">
+                    <li>Team Member ⭐⭐⭐⭐⭐</li>
+                    <li>Service ⭐⭐⭐⭐⭐</li>
+                    <li>Location ⭐⭐⭐⭐⭐</li>
+                    <li>Value ⭐⭐⭐⭐⭐</li>
+                </ul>
+            </div>
+
+            <a href="login">Booking with Us Now</a>
+
+    </div>
+    <footer>
+        <%- include('partials/footer.ejs') %>
+    </footer>
+</body>
+
+</html>

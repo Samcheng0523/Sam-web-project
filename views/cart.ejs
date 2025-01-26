@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .page-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .cart-item .name {
+            font-size: 18px;
+        }
+
+        .cart-item .price {
+            font-size: 18px;
+        }
+
+        .cart-item .quantity {
+            width: 50px;
+            padding: 5px;
+            text-align: center;
+        }
+
+        .cart-summary {
+            margin-top: 20px;
+            padding: 20px;
+            border-top: 1px solid #ddd;
+            font-size: 20px;
+            text-align: right;
+        }
+
+        .cart-icon {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            z-index: 100;
+        }
+
+        .cart-count {
+            background: #e74c3c;
+            color: white;
+            border-radius: 50%;
+            padding: 2px 6px;
+            font-size: 12px;
+            position: absolute;
+            top: -8px;
+            right: -8px;
+        }
+    </style>
+</head>
+
+<body>
+    <%- include('partials/navbar1.ejs') %>
+        <div class="cart-icon">
+            Cart <span class="cart-count">
+            </span>
+        </div>
+
+        <div class="container">
+            <h1 class="page-title">Your Cart</h1>
+
+            <!-- Cart Items -->
+                    <div class="cart-item">
+                        <div class="name">
+                        </div>
+                        <div class="price">$<%= item.itemPrice %>
+                        </div>
+                        <form action="/cart/update" method="POST">
+                            <input type="hidden" name="itemId" value="<%= item.itemId %>">
+                            <input type="number" name="quantity" class="quantity" value="<%= item.quantity %>" min="1">
+                            <button type="submit">Update</button>
+                        </form>
+                        <form action="/cart/remove" method="POST">
+                            <input type="hidden" name="itemId" value="<%= item.itemId %>">
+                            <button type="submit">Remove</button>
+                        </form>
+                    </div>
+                    <% }) %>
+
+                        <!-- Cart Summary -->
+                        <div class="cart-summary">
+                            <p>Total: $<%= cart.reduce((total, item)=> total + item.itemPrice * item.quantity,
+                                    0).toFixed(2) %></p>
+                            <button>Proceed to Checkout</button>
+                        </div>
+                        <% } else { %>
+                            <p>Your cart is empty!</p>
+                            <% } %>
+        </div>
+
+        <footer>
+            <%- include('partials/footer.ejs') %>
+        </footer>
+</body>
+
+</html>

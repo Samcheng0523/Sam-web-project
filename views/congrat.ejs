@@ -1,0 +1,95 @@
+
+<html>
+<head>
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            animation: slideIn 0.3s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translate(-50%, -60%);
+                opacity: 0;
+            }
+            to {
+                transform: translate(-50%, -50%);
+                opacity: 1;
+            }
+        }
+
+        .confetti {
+            font-size: 24px;
+            margin: 0 10px;
+        }
+
+        .title {
+            color: #333;
+            font-size: 24px;
+            margin: 10px 0;
+        }
+
+        .message {
+            color: #666;
+            margin: 15px 0;
+        }
+
+        .continue-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .continue-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div id="congrats" class="modal">
+        <div class="modal-content">
+            <span class="confetti">🎉</span>
+            <h2 class="title">Congratulations!</h2>
+            <span class="confetti">🎉</span>
+            <p class="message">Your register was successful!</p>
+            <button class="continue-btn" onclick="closeAndRedirect()">Continue</button>
+        </div>
+    </div>
+
+    <script>
+        // Show modal when page loads
+        window.onload = function() {
+            document.getElementById('congratsModal').style.display = 'block';
+        };
+
+        // Close modal and redirect
+        function closeAndRedirect() {
+            document.getElementById('congratsModal').style.display = 'none';
+            window.location.href = '/'; // Change this to your home page URL
+        }
+    </script>
+</body>
+</html>
